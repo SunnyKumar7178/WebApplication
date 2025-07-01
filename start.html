@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rules_page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container my-5 rounded col-8">
+        <div class="tophead bg-primary rounded">
+            <h2 class="mx-5 pt-5 text-white">⚠️ Test Rules & Instructions</h2>
+            <p class=" pb-5  text-white h5 mx-5 my-3">please read all instructions carefully before starting</p>
+        </div>
+        <div class="container" id="genralInstruction">
+            <p class="h3">📖 General Instructions:-</p>
+            <ul class="list-unstyled pt-3">
+                <li>✅ This test contain<strong>10 multiple choice questions.</strong></li>
+                <li>✅ Each question has only <strong>one correct answer.</strong></li>
+                <li>✅ You can navigate between question using <strong>Previous/Next Buttons.</strong></li>
+                <li>✅ Your answer is automatically save whenyou are select them.</li>
+            </ul>
+        </div>
+        <div class="container my-5" id="timeInstruction">
+            <p class="h3">⏰ Time Instructions:-</p>
+            <ul class="pt-3 list-unstyled">
+                <li>✅ Total time allowed <strong>15 minutes.</strong></li>
+                <li>✅ Timer will be visible at the top of the screen. </li>
+                <li>❌ Test will <strong>Auto-Submit</strong> when timer reaches zero.</li>
+                <li>✅ You can <strong>submit</strong> early by clicking the submit button.</li>
+            </ul>
+        </div>
+        <div class="container  fw-bold rounded" id="notes">
+            <p class="h3">⚠️ Important Notes</p>
+            <ul class="list-unstyled py-3">
+                <li><i class="bi bi-sticky"></i> Make sure you have a stable internet conection.</li>
+                <li><i class="bi bi-sticky"></i> Do not refresh the Page during the test.
+                </li>
+                <li><i class="bi bi-sticky"></i> Unanswered question will be marked as incorrect.</li>
+                <li><i class="bi bi-sticky"></i> Once submitted, you can not change your answers.</li>
+            </ul>
+        </div>
+        <button class="btn btn-primary float-end mb-5" id="starButton" onclick="StartQuiz()"><b>I understand - Start
+            Quiz</b></button>
+    </div>
+</body>
+
+</html>
