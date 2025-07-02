@@ -1,0 +1,16 @@
+#notes{
+    background: rgb(243, 214, 161);
+   color:rgb(109, 51, 9);
+}
+/* #startButton{
+    position: relative;
+    left: 480px;
+} */
+.tophead{
+    margin-left: -12px;
+    margin-right: -12px;
+ }
+ #header{
+    background: linear-gradient(135deg, #4928ee, #b553ed);
+ }
+ 
