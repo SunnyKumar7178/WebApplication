@@ -15,14 +15,15 @@
         <div class="tophead rounded-top" id="header">
             <div class="row">
                 <div class="col-1">
-                    <div class="container h2 mx-2 pt-5 text-center" >⚠️</div>
+                    <div class="container h2 mx-2 pt-5 text-center">⚠️</div>
                 </div>
                 <div class="col-9">
                     <div class="row">
                         <h2 class="mx-3 pt-3 text-white"> Test Rules & Instructions</h2>
                     </div>
                     <div class="row">
-                        <p class=" pb-3  text-white h5 mx-3 my-3">please read all instructions carefully before starting</p>
+                        <p class=" pb-3  text-white h5 mx-3 my-3">please read all instructions carefully before starting
+                        </p>
                     </div>
                 </div>
             </div>
@@ -30,7 +31,7 @@
         <div class="container" id="genralInstruction">
             <p class="h3 mt-5">📖 General Instructions:-</p>
             <ul class="list-unstyled pt-3">
-                <li >✅ This test contain<strong>10 multiple choice questions.</strong></li>
+                <li>✅ This test contain<strong>10 multiple choice questions.</strong></li>
                 <li class="my-3">✅ Each question has only <strong>one correct answer.</strong></li>
                 <li class="my-3">✅ You can navigate between question using <strong>Previous/Next Buttons.</strong></li>
                 <li>✅ Your answer is automatically save whenyou are select them.</li>
@@ -45,10 +46,10 @@
                 <li>✅ You can <strong>submit</strong> early by clicking the submit button.</li>
             </ul>
         </div>
-        <div class="container col-11   border-start border-danger border-5 rounded"  id="notes">
+        <div class="container col-11   border-start border-danger border-5 rounded" id="notes">
             <p class="h3">⚠️ Important Notes</p>
             <ul class="list-unstyled py-3 ">
-                <li><i class="bi bi-sticky " ></i> Make sure you have a stable internet conection.</li>
+                <li><i class="bi bi-sticky "></i> Make sure you have a stable internet conection.</li>
                 <li class="my-3"><i class="bi bi-sticky"></i> Do not refresh the Page during the test.
                 </li>
                 <li class="my-3"><i class="bi bi-sticky"></i> Unanswered question will be marked as incorrect.</li>
@@ -56,9 +57,48 @@
             </ul>
 
         </div>
-        <div  class="d-flex justify-content-center ">
+        <div class="d-flex justify-content-center ">
             <button class="btn btn-primary  my-3" id="startButton" onclick="StartQuiz()"><b>I understand-Start
                     Quiz</b></button>
+        </div>
+    </div>
+    <div class="container rounded shadow-lg col-8  pb-5 my-5">
+        <div class="h1 text-center ">✅</div>
+        <h1 class="text-center">Test submitted <br>Successfully! <br>🎉</h1>
+        <p class="text-center my-3">Congratulations! You have <br>completed your quiz <br> assessment.</p>
+
+        <div class="container shadow-lg rounded bg-white pt-4 pb-4 my-3 col-8 ">
+            <div class="row">
+                <div class="col text-center text-primary" id="correct"><b class="h2">0</b><br>
+                    <lable class="form-lable text-dark">Correct</lable>
+                </div>
+
+                <div class="col text-center text-primary " id="total"><b class="h2">10</b><br>
+                    <lable class="form-lable text-dark">Total</lable>
+                </div>
+
+                <div class="col text-center text-primary" id="score"><b class="h2">0%</b>
+                    <br>
+                    <lable class="form-lable text-dark">Score</lable>
+                </div>
+
+                <div class="col text-center text-primary" id="grade"><b class="h2">F</b>
+                    <br>
+                    <lable class="form-lable text-dark">Grade</lable>
+                </div>
+            </div>
+        </div>
+        <div class="container my-3 justify-content-center col-8 shadow-lg rounded pt-3">
+            <button class="btn btn-primary my-3 rounded"><b>📊 Viewed detailed score</b></button>
+            <button class="btn btn-secondary my-3 rounded mx-3"><b>🏠 Back to Home</b></button>
+            <br>
+            <p class="text-center pb-3" id="time-taken">time taken: 0m 0s</p>
+        </div>
+        <div class="container col-8 rounded shadow-lg">
+            <p class="h1 text-center pt-3">🏆</p>
+
+            <p class="text-center pb-3">Keep Practicing! <br>
+                Consider reviewing the topics and trying again.</p>
         </div>
     </div>
 </body>
