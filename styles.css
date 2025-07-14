@@ -1,0 +1,19 @@
+#timer{
+    background-color: #FEE2E2;
+    color: red;
+}
+.questionbtn{
+    border-radius: 50%;
+    background: grey;
+}
+.status-dot {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 10px;
+}
+ .current { background-color: #007bff; }   /* Bootstrap Primary Blue */
+    .answered { background-color: #28a745; }  /* Bootstrap Success Green */
+    .not-answered { background-color: #d6d6d6; } /* Light Grey */
+    .touched { background-color: #dc3545; }   /* Bootstrap Danger Red */

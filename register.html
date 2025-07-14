@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegisterExamination</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container text-center my-4">
+        <img src="elgoss.jpg" alt="elgoss" style="width: 200px; height: 50px;">
+    </div>
+
+    <div class="container shadow-lg rounded col-5  mt-2 mb-5 py-2">
+
+        <h3 class="text-center pt-2">Create a new Account</h3>
+        <p class="text-center">Its Quick and easy</p>
+        <hr>
+        <div class="container">
+            <div class="row my-2">
+                <div class="col-6">
+                    <input type="text" name="firstName" id="firstName" placeholder="first Name" class="form-control">
+                </div>
+                <div class="col-6 ">
+                    <input type="text" name="lastName" id="lastName" placeholder="last Name" class="form-control">
+
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <span class="">Date of Birth?</span>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <select name="" id="dob-day" class="form-select">
+                        <option value="" selected disabled>day</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <select name="" id="dob-month" class="form-select">
+                        <option value="" selected disabled>Month</option>
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <select name="" id="dob-year" class="form-select">
+                        <option value="" selected disabled>Year</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="container pt-2">
+            <span>Gender?</span>
+        </div>
+        <div class="row g-5 px-3 pb-2">
+            <div class="col-12 col-md-4">
+                <div class="border rounded p-2 text-center">
+                    <label class="form-check-label" for="male">Male</label>
+                    <input class="form-check-input ms-2" type="radio" name="gendre" id="male">
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="border rounded p-2 text-center">
+                    <label class="form-check-label" for="female">Female</label>
+                    <input class="form-check-input ms-2" type="radio" name="gendre" id="female">
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="border rounded p-2 text-center">
+                    <label class="form-check-label" for="custom">Custom</label>
+                    <input class="form-check-input ms-2" type="radio" name="gendre" id="custom">
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row p-2">
+                <div class="">
+                    <input type="email" name="" id="" class="form-control" placeholder="Phone Number or email address">
+                </div>
+
+            </div>
+            <div class="row p-2">
+                <div class="">
+                    <input type="password" name="" id="" class="form-control" placeholder=" New password">
+                </div>
+            </div>
+            <p class="small text-secondary ">Welcome to the Online Examination Portal! Register now to take your first step towards academic success. 
+                Our platform offers a smooth, secure, and user-friendly exam experience from the comfort of your home. 
+            </p>
+            <p class="small text-secondary">Don’t miss the opportunity to test your knowledge, improve your performance, and achieve your goals. Join today and stay ahead in your learning journey!</p>
+        </div>
+        <div class="container d-flex justify-content-center">
+
+            <button class="btn btn-primary px-5 text-center align-item-center" type="submit">Sign Up</button>
+        </div>
+        <div class="container p-2 text-center">
+        <a href="#" class="">Already have an Account? </a>
+        </div>  
+    </div>
+    <script>
+        const daySelect = document.getElementById("dob-day");
+        for (let d = 1; d < 32; d++) {
+            const option = document.createElement("option");
+            option.value = d;
+            option.text = d;
+            daySelect.appendChild(option);
+
+        }
+
+        const yearSelect = document.getElementById("dob-year");
+        const currentYear = new Date().getFullYear();
+        for (let y = currentYear; y >= 1900; y--) {
+            const option = document.createElement("option");
+            option.value = y;
+            option.text = y;
+            yearSelect.appendChild(option);
+
+        }
+    </script>
+</body>
+
+</html>

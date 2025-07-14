@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Pulse Reveal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Landing Page -->
+     
+    <div id="landing-page" class="page active">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1 class="title">Question Pulse Reveal</h1>
+                <p class="subtitle">Test your knowledge with our interactive quiz platform. Challenge yourself and track your progress.</p>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">⏱️</div>
+                    <h3>Timed Tests</h3>
+                    <p>Challenge yourself with time-bound questions</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">👥</div>
+                    <h3>Multiple Choice</h3>
+                    <p>Carefully crafted questions with multiple options</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🏆</div>
+                    <h3>Instant Results</h3>
+                    <p>Get detailed feedback and scoring immediately</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">✅</div>
+                    <h3>Progress Tracking</h3>
+                    <p>Monitor your performance and improvement</p>
+                </div>
+            </div>
+
+            <!-- Main CTA -->
+            <div class="cta-section">
+                <div class="cta-card">
+                    <h2>Ready to Start Your Quiz?</h2>
+                    <p>Click below to begin your assessment. Make sure you have enough time to complete all questions.</p>
+                    <button id="start-test-btn" class="btn btn-primary">Start Test</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Test Rules Page -->
+    <div id="rules-page" class="page">
+        <div class="container">
+            <div class="rules-card">
+                <div class="rules-header">
+                    <div class="icon">⚠️</div>
+                    <div>
+                        <h2>Test Rules & Instructions</h2>
+                        <p>Please read all instructions carefully before starting</p>
+                    </div>
+                </div>
+                
+                <div class="rules-content">
+                    <div class="rules-section">
+                        <h3>📖 General Instructions</h3>
+                        <ul>
+                            <li>✅ This test contains <strong>10 multiple choice questions</strong></li>
+                            <li>✅ Each question has only <strong>one correct answer</strong></li>
+                            <li>✅ You can navigate between questions using <strong>Previous/Next buttons</strong></li>
+                            <li>✅ Your answers are automatically saved when you select them</li>
+                        </ul>
+                    </div>
+
+                    <div class="rules-section">
+                        <h3>⏰ Timer Instructions</h3>
+                        <ul>
+                            <li>✅ Total time allowed: <strong>15 minutes</strong></li>
+                            <li>✅ Timer will be visible at the top of the screen</li>
+                            <li>❌ <strong>Test will auto-submit when timer reaches zero</strong></li>
+                            <li>✅ You can submit early by clicking the Submit button</li>
+                        </ul>
+                    </div>
+
+                    <div class="warning-section">
+                        <h3>⚠️ Important Notes</h3>
+                        <ul>
+                            <li>• Make sure you have a stable internet connection</li>
+                            <li>• Do not refresh the page during the test</li>
+                            <li>• Unanswered questions will be marked as incorrect</li>
+                            <li>• Once submitted, you cannot change your answers</li>
+                        </ul>
+                    </div>
+
+                    <div class="rules-actions">
+                       <button id="back-to-home-btn" class="btn btn-secondary">Back to Home</button>
+                        <button id="start-quiz-btn" class="btn btn-primary">I Understand - Start Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Interface -->
+    <div id="quiz-page" class="page">
+        <div class="container">
+            <!-- Header with Timer -->
+            <div class="quiz-header">
+                <div class="quiz-info">
+                    <h2>Quiz Assessment</h2>
+                    <p id="question-counter">Question 1 of 10</p>
+                </div>
+                <div class="timer-section">
+                    <div class="timer-icon">⏱️</div>
+                    <span id="timer">15:00</span>
+                </div>
+            </div>
+            
+            <div class="progress-bar">
+                <div id="progress" class="progress-fill"></div>
+            </div>
+
+            <div class="quiz-content">
+                <!-- Question Status Panel -->
+                <div class="status-panel">
+                    <h3>Question Status</h3>
+                    <div id="question-grid" class="question-grid"></div>
+                    <div class="status-legend">
+                        <div class="legend-item">
+                            <div class="legend-color current"></div>
+                            <span>Current</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color answered"></div>
+                            <span>Answered</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color unanswered"></div>
+                            <span>Not Answered</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color Touched"></div>
+                            <span>Touched</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Question Area -->
+                <div class="question-area">
+                    <div class="question-card">
+                        <h3 id="question-text">Question will appear here</h3>
+                        <div id="options-container" class="options-container"></div>
+                        
+                        <div class="navigation-buttons">
+                            <button id="prev-btn" class="btn btn-secondary">← Previous</button>
+                            <div class="nav-right">
+                                <button id="next-btn" class="btn btn-primary">Next →</button>
+                                <button id="submit-btn" class="btn btn-success">Submit Test</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Test Completed Page -->
+    <div id="completed-page" class="page">
+        <div class="container">
+            <div class="completion-card">
+                <div class="success-icon">✅</div>
+                <h1>Test Submitted Successfully! 🎉</h1>
+                <p>Congratulations! You have completed your quiz assessment.</p>
+
+                <div class="quick-results">
+                    <div class="result-item">
+                        <div id="correct-count" class="result-number">0</div>
+                        <div class="result-label">Correct</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-number">10</div>
+                        <div class="result-label">Total</div>
+                    </div>
+                    <div class="result-item">
+                        <div id="percentage-score" class="result-number">0%</div>
+                        <div class="result-label">Score</div>
+                    </div>
+                    <div class="result-item">
+                        <div id="grade-display" class="result-number">F</div>
+                        <div class="result-label">Grade</div>
+                    </div>
+                </div>
+
+                <div class="completion-actions">
+                    <button id="view-score-btn" class="btn btn-primary">📊 View Detailed Score</button>
+                    <button id="back-home-btn" class="btn btn-secondary">🏠 Back to Home</button>
+                </div>
+
+                <div class="time-taken">
+                    <p>Time taken: <span id="time-taken-display">0m 0s</span></p>
+                </div>
+            </div>
+
+            <div class="performance-card">
+                <div class="performance-icon">🏆</div>
+                <span id="performance-message">Keep Practicing!</span>
+                <p id="performance-description">Consider reviewing the topics and trying again.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Score Card Page -->
+    <div id="scorecard-page" class="page">
+        <div class="container">
+            <!-- Header -->
+            <div class="scorecard-header">
+                <div>
+                    <h2>Detailed Score Report</h2>
+                    <p>Complete analysis of your performance</p>
+                </div>
+                <button id="home-btn" class="btn btn-secondary">🏠 Home</button>
+            </div>
+
+            <!-- Summary Stats -->
+            <div class="stats-grid">
+                <div class="stat-card correct">
+                    <div id="final-correct" class="stat-number">0</div>
+                    <div class="stat-label">Correct Answers</div>
+                </div>
+                <div class="stat-card incorrect">
+                    <div id="final-incorrect" class="stat-number">0</div>
+                    <div class="stat-label">Incorrect Answers</div>
+                </div>
+                <div class="stat-card percentage">
+                    <div id="final-percentage" class="stat-number">0%</div>
+                    <div class="stat-label">Overall Score</div>
+                </div>
+                <div class="stat-card time">
+                    <div id="final-time" class="stat-number">0m 0s</div>
+                    <div class="stat-label">Time Taken</div>
+                </div>
+            </div>
+
+            <!-- Performance Overview -->
+            <div class="performance-overview">
+                <h3>Performance Overview</h3>
+                <div class="progress-section">
+                    <div class="progress-label">
+                        <span>Overall Score</span>
+                        <span id="progress-percentage">0%</span>
+                    </div>
+                    <div class="progress-bar-large">
+                        <div id="progress-fill" class="progress-fill-large"></div>
+                    </div>
+                </div>
+                <div class="performance-summary">
+                    <div class="summary-item">
+                        <span class="summary-icon correct">✅</span>
+                        <span id="summary-correct">0 Correct</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-icon incorrect">❌</span>
+                        <span id="summary-incorrect">0 Incorrect</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-icon total">ℹ️</span>
+                        <span>10 Total</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Question Analysis -->
+            <div class="question-analysis">
+                <h3>Question by Question Analysis</h3>
+                <div id="detailed-analysis" class="analysis-container"></div>
+            </div>
+
+            <!-- Footer -->
+            <div class="scorecard-footer">
+                <button id="return-home-btn" class="btn btn-primary">🏠 Return to Home</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
